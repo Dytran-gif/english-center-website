@@ -1,0 +1,27 @@
+/* ============================================
+   STYLE GUIDE CHUNG — cả nhóm dùng chung biến này
+   để giao diện các trang đồng bộ với nhau
+   ============================================ */
+
+:root {
+  /* TODO: 2 bạn họp thống nhất bảng màu thật rồi thay vào đây */
+  --color-primary: #2E5EAA;
+  --color-primary-dark: #1E3F73;
+  --color-secondary: #F2A93B;
+  --color-text: #222222;
+  --color-text-muted: #666666;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F7F8FA;
+  --color-border: #E0E0E0;
+  --color-success: #2E9E5B;
+  --color-error: #D64545;
+
+  /* TODO: chọn font chữ chính thức */
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Segoe UI', Arial, sans-serif;
+
+  --radius: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+}
