@@ -1,16 +1,23 @@
-# React + Vite
+# English Center Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Website FE cho trung tâm tiếng Anh + quản lý sinh viên (đồ án nhóm 3 người).
+Trang chủ công khai + dashboard theo vai trò (student / teacher / admin) sau đăng nhập.
 
-Currently, two official plugins are available:
+## Chạy dự án
+```bash
+npm install     # cài lần đầu
+npm run dev     # chạy local, mở http://localhost:5173
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Trước khi push: `npm run lint && npm run typecheck` phải xanh.
 
-## React Compiler
+## Đăng nhập thử (demo, chưa có backend)
+Mật khẩu chung: `123456`
+- `student@demo.com` → dashboard học viên
+- `teacher@demo.com` → dashboard giáo viên
+- `admin@demo.com` → trang quản trị
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Bắt đầu code
+1. Đọc **`CLAUDE.md`** ở gốc repo — bản đồ đầy đủ (tech stack, cấu trúc, ai làm gì, luật, nền auth).
+2. Xem tiến độ & việc tiếp theo ở **`docs/5-Tong-quan-tien-do.md`**.
+3. Dùng agent (Claude Code / Copilot)? Bảo nó "đọc CLAUDE.md rồi làm theo".

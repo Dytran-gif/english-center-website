@@ -12,6 +12,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./components/ProtectedRoute";
+import StudentDashboard from "./pages/student";
+import TeacherDashboard from "./pages/teacher";
+import AdminDashboard from "./pages/admin";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +32,9 @@ export default function AppRoutes() {
       <Route path="/dang-nhap" element={<Login />} />
       <Route path="/dang-ky" element={<Register />} />
       <Route path="/tai-khoan" element={<Profile />} />
+      <Route path="/student" element={<ProtectedRoute role="student"><StudentDashboard /></ProtectedRoute>} />
+      <Route path="/teacher" element={<ProtectedRoute role="teacher"><TeacherDashboard /></ProtectedRoute>} />
+      <Route path="/admin" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
