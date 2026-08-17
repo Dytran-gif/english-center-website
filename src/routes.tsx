@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
@@ -13,7 +13,8 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
-import StudentDashboard from "./pages/student";
+import StudentLayout from "./pages/student/Layout/StudentLayout";
+import StudentDashboard from "./pages/student/Dashboard/Dashboard";
 import TeacherDashboard from "./pages/teacher";
 import AdminDashboard from "./pages/admin";
 
@@ -32,7 +33,28 @@ export default function AppRoutes() {
       <Route path="/dang-nhap" element={<Login />} />
       <Route path="/dang-ky" element={<Register />} />
       <Route path="/tai-khoan" element={<Profile />} />
-      <Route path="/student" element={<ProtectedRoute role="student"><StudentDashboard /></ProtectedRoute>} />
+<Route
+    path="/student"
+    element={
+        <ProtectedRoute role="student">
+            <StudentLayout />
+        </ProtectedRoute>
+    }
+>
+    <Route index element={<Navigate to="/student/dashboard" replace />} />
+    <Route path="dashboard" element={<StudentDashboard />} />
+
+    {/* Sau này thêm các page */}
+    {/* 
+    <Route path="skill" element={<StudentSkill />} />
+    <Route path="practice" element={<StudentPractice />} />
+    <Route path="process" element={<StudentProcess />} />
+    <Route path="schedule" element={<StudentSchedule />} />
+    <Route path="courses" element={<StudentCourses />} />
+    <Route path="feedback" element={<StudentFeedback />} />
+    <Route path="tuition" element={<StudentTuition />} />
+    */}
+</Route>
       <Route path="/teacher" element={<ProtectedRoute role="teacher"><TeacherDashboard /></ProtectedRoute>} />
       <Route path="/admin" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
       <Route path="*" element={<NotFound />} />
