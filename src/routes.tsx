@@ -15,8 +15,16 @@ import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import StudentLayout from "./pages/student/Layout/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard/Dashboard";
-import TeacherDashboard from "./pages/teacher";
-import AdminDashboard from "./pages/admin";
+import AdminLayout from "./pages/admin/Layout/AdminLayout";
+import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
+import CoursesManagement from "./pages/admin/Courses/CoursesManagement";
+import UsersManagement from "./pages/admin/Users/UsersManagement";
+import BlogManagement from "./pages/admin/Blog/BlogManagement";
+import TeacherLayout from "./pages/teacher/Layout/TeacherLayout";
+import TeacherDashboard from "./pages/teacher/Dashboard/Dashboard";
+import TeacherClasses from "./pages/teacher/Classes/Classes";
+import TeacherSchedule from "./pages/teacher/Schedule/Schedule";
+import TeacherProfile from "./pages/teacher/Profile/Profile";
 
 export default function AppRoutes() {
   return (
@@ -55,8 +63,34 @@ export default function AppRoutes() {
     <Route path="tuition" element={<StudentTuition />} />
     */}
 </Route>
-      <Route path="/teacher" element={<ProtectedRoute role="teacher"><TeacherDashboard /></ProtectedRoute>} />
-      <Route path="/admin" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
+      <Route
+          path="/admin"
+          element={
+              <ProtectedRoute role="admin">
+                  <AdminLayout />
+              </ProtectedRoute>
+          }
+      >
+          <Route index element={<Navigate to="/admin/dashboard" replace />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="courses" element={<CoursesManagement />} />
+          <Route path="users" element={<UsersManagement />} />
+          <Route path="blog" element={<BlogManagement />} />
+      </Route>
+      <Route
+          path="/teacher"
+          element={
+              <ProtectedRoute role="teacher">
+                  <TeacherLayout />
+              </ProtectedRoute>
+          }
+      >
+          <Route index element={<Navigate to="/teacher/dashboard" replace />} />
+          <Route path="dashboard" element={<TeacherDashboard />} />
+          <Route path="classes" element={<TeacherClasses />} />
+          <Route path="schedule" element={<TeacherSchedule />} />
+          <Route path="profile" element={<TeacherProfile />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
