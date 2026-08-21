@@ -1,0 +1,784 @@
+.student-dashboard {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard-top {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.dashboard-left {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dashboard-right {
+    min-width: 0;
+}
+
+.dashboard-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.stat-card,
+.ai-suggested,
+.performance-card,
+.learning-process,
+.study-time {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.stat-card {
+    min-height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    font-size: 20px;
+}
+
+.stat-card h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.stat-card p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-bottom {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.stat-points .stat-icon {
+    background: #fef3c7;
+}
+
+.stat-streak .stat-icon {
+    background: #fee2e2;
+}
+
+.stat-courses .stat-icon {
+    background: #dbeafe;
+}
+
+.stat-attendance .stat-icon {
+    background: #d1fae5;
+}
+
+
+/* =========================
+   AI SUGGESTED
+========================= */
+
+.ai-suggested {
+    padding: 22px;
+}
+
+.ai-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.ai-header h2,
+.performance-header h2,
+.learning-header h2,
+.study-time-header h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 19px;
+}
+
+.ai-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.ai-navigation button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475569;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.ai-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.ai-card {
+    min-height: 190px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.ai-type {
+    color: #3b82f6;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ai-card h3 {
+    margin: 10px 0 6px;
+    color: #1e293b;
+    font-size: 16px;
+}
+
+.ai-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ai-progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.ai-progress-bar {
+    height: 6px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e2e8f0;
+}
+
+.ai-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #3b82f6;
+}
+
+.ai-progress span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.ai-action {
+    width: 100%;
+    margin-top: 14px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =========================
+   PERFORMANCE
+========================= */
+
+.performance-card {
+    height: 100%;
+    min-height: 364px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.performance-header {
+    margin-bottom: 8px;
+}
+
+.performance-radar {
+    position: relative;
+    flex: 1;
+    min-height: 280px;
+}
+
+.performance-svg {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 100%;
+    max-width: 300px;
+    height: 240px;
+    transform: translateX(-50%);
+    overflow: visible;
+}
+
+.performance-label {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: #64748b;
+    font-size: 10px;
+    text-align: center;
+}
+
+.performance-label strong {
+    color: #1e293b;
+    font-size: 12px;
+}
+
+.label-top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.label-left {
+    top: 38%;
+    left: 0;
+}
+
+.label-right {
+    top: 38%;
+    right: 0;
+}
+
+.label-bottom-left {
+    bottom: 2%;
+    left: 12%;
+}
+
+.label-bottom-right {
+    right: 12%;
+    bottom: 2%;
+}
+
+.radar-grid {
+    fill: none;
+    stroke: #dbe4ef;
+    stroke-width: 1;
+}
+
+.radar-grid-outer {
+    stroke: #cbd5e1;
+}
+
+.radar-axis {
+    stroke: #e2e8f0;
+    stroke-width: 1;
+}
+
+.radar-data {
+    fill: #3b82f6;
+    fill-opacity: 0.15;
+    stroke: #3b82f6;
+    stroke-width: 2;
+}
+
+.radar-dot {
+    fill: #3b82f6;
+}
+
+.radar-score {
+    fill: #1e293b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.performance-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 6px 0 14px;
+}
+
+.performance-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.performance-dots span.active {
+    background: #3b82f6;
+}
+
+.performance-next {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.performance-next span {
+    margin-left: 6px;
+}
+
+
+/* =========================
+   LEARNING PROCESS
+========================= */
+
+.learning-process {
+    min-width: 0;
+}
+
+.learning-header {
+    padding: 22px 22px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.learning-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 22px;
+}
+
+.learning-overview h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 16px;
+}
+
+.learning-date {
+    display: block;
+    margin-top: 5px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.learning-overview p {
+    margin: 14px 0 18px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.learning-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.learning-stat {
+    padding: 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.learning-stat strong {
+    display: block;
+    color: #1e293b;
+    font-size: 17px;
+}
+
+.learning-stat span {
+    color: #64748b;
+    font-size: 10px;
+}
+
+.learning-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skill-progress-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.skill-progress-top strong {
+    color: #1e293b;
+}
+
+.skill-progress-bar {
+    width: 100%;
+    height: 7px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e2e8f0;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.skill-progress-fill.green {
+    background: #10b981;
+}
+
+.skill-progress-fill.blue {
+    background: #3b82f6;
+}
+
+.skill-progress-fill.purple {
+    background: #8b5cf6;
+}
+
+.skill-progress-fill.orange {
+    background: #f59e0b;
+}
+
+.great-job {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #eff6ff;
+}
+
+.great-job-icon {
+    font-size: 18px;
+}
+
+.great-job h4 {
+    margin: 0 0 4px;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+.great-job p {
+    margin: 0;
+    color: #64748b;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   STUDY TIME
+========================= */
+
+.study-time {
+    min-width: 0;
+    padding: 22px;
+}
+
+.study-time-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.study-time-header span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.study-time-chart {
+    display: flex;
+    height: 300px;
+}
+
+.study-y-axis {
+    width: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 8px 28px 0;
+    box-sizing: border-box;
+    color: #94a3b8;
+    font-size: 9px;
+    text-align: right;
+}
+
+.chart-area {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    margin-left: 6px;
+    border-left: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.chart-grid {
+    position: absolute;
+    inset: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-grid span {
+    width: 100%;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.goal-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed #f59e0b;
+    z-index: 2;
+}
+
+.goal-line span {
+    position: absolute;
+    right: 0;
+    top: -16px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 9px;
+}
+
+.study-bars {
+    position: absolute;
+    inset: 0 8px 0 8px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.study-bar-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.study-value {
+    position: absolute;
+    bottom: calc(100% - 28px);
+    color: #64748b;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.study-bar-wrapper {
+    width: 100%;
+    height: calc(100% - 28px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.study-bar {
+    width: min(28px, 70%);
+    min-height: 4px;
+    border-radius: 7px 7px 0 0;
+    background: #93c5fd;
+}
+
+.study-bar.today {
+    background: #3b82f6;
+}
+
+.study-day {
+    height: 28px;
+    display: flex;
+    align-items: flex-end;
+    color: #64748b;
+    font-size: 9px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+    .dashboard-top {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-right {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-content {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .study-time-chart {
+        height: 260px;
+    }
+}
+
+/* Dashboard.css */
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.col-8,
+.col-6,
+.col-4 {
+    position: relative;
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+
+/* col-8 */
+.col-8 {
+    width: 66.666667%;
+}
+
+/* col-4 */
+.col-4 {
+    width: 33.333333%;
+}
+
+/* col-6 */
+.col-6 {
+    width: 50%;
+}
+
+/* Khoảng cách giữa các section */
+.col-8>*,
+.col-4>*,
+.col-6>* {
+    margin-bottom: 24px;
+}
+
+/* Row bên trong Learning Process + Study Time */
+.row>.row {
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .col-8,
+    .col-4 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-6 {
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .col-8,
+    .col-6,
+    .col-4 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
