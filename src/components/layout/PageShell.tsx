@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import "../../styles/public-theme.css";
 
 interface PageShellProps {
   children: ReactNode;
