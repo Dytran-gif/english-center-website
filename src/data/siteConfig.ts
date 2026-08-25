@@ -26,16 +26,11 @@ export interface OfficeLocation {
 
 // Contact details below are placeholders for this student project — not the
 // reference center's real hotline/email — kept in the same city/format style.
-export const offices: OfficeLocation[] = [
-  { city: "Hồ Chí Minh", lines: ["226 Lê Văn Sỹ, Tân Bình, Hồ Chí Minh"] },
+export const offices = [
   {
-    city: "Vũng Tàu",
-    lines: [
-      "Cơ sở 1: 27G1 Nguyễn Oanh, P.7, TP Vũng Tàu",
-      "Cơ sở 2: 2K3-3K3-4K3 Nguyễn Thái Học, P.7, TP Vũng Tàu",
-    ],
+    city: "Cơ sở chính",
+    lines: ["123 Đường ABC, Quận 1, TP. Hồ Chí Minh"],
   },
-  { city: "Bà Rịa", lines: ["76-80-84 Bạch Đằng, P. Phước Trung, TP Bà Rịa"] },
 ];
 
 export const contactEmail = "hi@happyielts.vn";

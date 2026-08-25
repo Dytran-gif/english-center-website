@@ -65,3 +65,25 @@ src/routes.tsx · src/styles/tokens.css · src/components/ui/ · src/context/ ·
 - CUỐI buổi: cập nhật khối bàn giao trong docs/5-Tong-quan-tien-do.md
   (xong gì / đang dở / việc tiếp theo / bẫy cần biết) → commit + push.
 - Điều gì không ghi vào file đã commit = coi như mất.
+
+## GIAO DIỆN PUBLIC — màu & animation (do Hoàng làm)
+Quy tắc quan trọng để KHÔNG đụng dashboard của 2 bạn:
+- Trang public đi qua PageShell (class `.page-shell`). Dashboard
+  student/teacher/admin dùng layout riêng, KHÔNG nằm trong `.page-shell`.
+- Muốn đổi MÀU trang public: sửa trong `src/styles/public-theme.css`,
+  ghi đè token CHỈ trong phạm vi `.page-shell { --blue: ... }`.
+  TUYỆT ĐỐI không sửa token gốc trong `src/styles/tokens.css` cho việc này
+  — vì header/sidebar của teacher & admin cũng xài `--blue` chung.
+- `public-theme.css` được nạp 1 lần trong `PageShell.tsx`.
+- Hiệu ứng: `<Reveal/>` (src/components/sections/Reveal.tsx) bọc từng
+  section trang chủ để mờ hiện khi cuộn; Hero có animation lúc tải trang;
+  tất cả đều tôn trọng `prefers-reduced-motion`.
+
+## KHẢO SÁT CHỌN KHOÁ (trang chủ — do Hoàng làm)
+- Khối `CourseSurvey` (src/components/sections/CourseSurvey.tsx + .css):
+  hỏi 3 câu (mục tiêu / trình độ / nhịp độ) rồi gợi ý 1 khoá học.
+- Câu hỏi + logic gợi ý: src/components/sections/surveyConfig.ts
+  (đặt cạnh component, KHÔNG để trong src/data/ để tránh thư mục dùng chung).
+- Slug gợi ý khớp src/data/courses.ts; link tới /khoa-hoc/:slug.
+- Đã gắn vào Home.tsx (sau TrustStats). Muốn chỉnh khoá gợi ý → sửa
+  hàm recommendCourse trong surveyConfig.ts.
