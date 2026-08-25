@@ -4,7 +4,7 @@ export const studyTimeData: StudyTime = {
     data: [
         {
             day: "Fri",
-            minutes: 35,
+            minutes: 30,
         },
 
         {
