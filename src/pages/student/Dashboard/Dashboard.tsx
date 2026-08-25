@@ -21,7 +21,7 @@ export default function StudentDashboard() {
             <div className="col-4">
                 <Performance />
             </div>
-            <div className="row">{/* Learning Process */}
+            <div className="row setting">{/* Learning Process */}
                 <div className="col-6">
                     <LearningProcess />
                 </div>

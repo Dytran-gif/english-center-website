@@ -240,7 +240,7 @@
 ========================= */
 
 .performance-card {
-    height: 100%;
+    height: 95%;
     min-height: 364px;
     padding: 22px;
     display: flex;
@@ -248,7 +248,7 @@
 }
 
 .performance-header {
-    margin-bottom: 8px;
+    margin-bottom: 25px;
 }
 
 .performance-radar {
@@ -301,13 +301,13 @@
 }
 
 .label-bottom-left {
-    bottom: 2%;
-    left: 12%;
+    bottom: 15%;
+    left: 15%;
 }
 
 .label-bottom-right {
-    right: 12%;
-    bottom: 2%;
+    right: 10%;
+    bottom: 15%;
 }
 
 .radar-grid {
@@ -327,9 +327,9 @@
 
 .radar-data {
     fill: #3b82f6;
-    fill-opacity: 0.15;
+    fill-opacity: 0.7;
     stroke: #3b82f6;
-    stroke-width: 2;
+    stroke-width: 1;
 }
 
 .radar-dot {
@@ -337,8 +337,8 @@
 }
 
 .radar-score {
-    fill: #1e293b;
-    font-size: 22px;
+    fill: #e10c0c;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -521,14 +521,15 @@
 
 .study-time {
     min-width: 0;
-    padding: 22px;
+    padding: 20px 20px 42px 20px;
+    margin-right: -10px;
 }
 
 .study-time-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 35px;
 }
 
 .study-time-header span {
@@ -546,10 +547,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4px 8px 28px 0;
     box-sizing: border-box;
     color: #94a3b8;
-    font-size: 9px;
+    font-size: 11px;
     text-align: right;
 }
 
@@ -564,7 +564,7 @@
 
 .chart-grid {
     position: absolute;
-    inset: 0 0 28px 0;
+    inset: 0px 0 0px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -585,8 +585,8 @@
 
 .goal-line span {
     position: absolute;
-    right: 0;
-    top: -16px;
+    right: -18px;
+    top: -10px;
     padding: 2px 5px;
     border-radius: 4px;
     background: #fef3c7;
@@ -602,6 +602,10 @@
     gap: 8px;
 }
 
+.study-bar:hover {
+    background-color: #53a2fb;
+}
+
 .study-bar-item {
     position: relative;
     display: flex;
@@ -613,7 +617,7 @@
 
 .study-value {
     position: absolute;
-    bottom: calc(100% - 28px);
+    bottom: calc(100%);
     color: #64748b;
     font-size: 9px;
     white-space: nowrap;
@@ -621,7 +625,7 @@
 
 .study-bar-wrapper {
     width: 100%;
-    height: calc(100% - 28px);
+    height: calc(100% - 55px);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -692,6 +696,10 @@
     .study-time-chart {
         height: 260px;
     }
+
+    .study-time {
+        margin-right: 0px;
+    }
 }
 
 /* Dashboard.css */
@@ -746,6 +754,10 @@
 /* Row bên trong Learning Process + Study Time */
 .row>.row {
     width: 100%;
+}
+
+.setting {
+    padding-left: 10px;
 }
 
 /* =========================
