@@ -6,4 +6,7 @@ export const adminSidebarMenuItems: SidebarMenuItem[] = [
     { label: "Khóa học", path: "/admin/courses", icon: "▤" },
     { label: "Người dùng", path: "/admin/users", icon: "◈" },
     { label: "Tin tức / Blog", path: "/admin/blog", icon: "✎" },
+    { label: "Học phí", path: "/admin/payments", icon: "$" },
+    { label: "Báo cáo", path: "/admin/reports", icon: "▦" },
+    { label: "Phòng học", path: "/admin/rooms", icon: "▢" },
 ];

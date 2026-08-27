@@ -20,11 +20,18 @@ import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
 import CoursesManagement from "./pages/admin/Courses/CoursesManagement";
 import UsersManagement from "./pages/admin/Users/UsersManagement";
 import BlogManagement from "./pages/admin/Blog/BlogManagement";
+import PaymentsManagement from "./pages/admin/Payments/PaymentsManagement";
+import Reports from "./pages/admin/Reports/Reports";
+import RoomsManagement from "./pages/admin/Rooms/RoomsManagement";
 import TeacherLayout from "./pages/teacher/Layout/TeacherLayout";
 import TeacherDashboard from "./pages/teacher/Dashboard/Dashboard";
 import TeacherClasses from "./pages/teacher/Classes/Classes";
 import TeacherSchedule from "./pages/teacher/Schedule/Schedule";
 import TeacherProfile from "./pages/teacher/Profile/Profile";
+import TeacherAttendance from "./pages/teacher/Attendance/Attendance";
+import TeacherGrades from "./pages/teacher/Grades/Grades";
+import TeacherAssignments from "./pages/teacher/Assignments/Assignments";
+import TeacherMaterials from "./pages/teacher/Materials/Materials";
 
 export default function AppRoutes() {
   return (
@@ -76,6 +83,9 @@ export default function AppRoutes() {
           <Route path="courses" element={<CoursesManagement />} />
           <Route path="users" element={<UsersManagement />} />
           <Route path="blog" element={<BlogManagement />} />
+          <Route path="payments" element={<PaymentsManagement />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="rooms" element={<RoomsManagement />} />
       </Route>
       <Route
           path="/teacher"
@@ -88,6 +98,10 @@ export default function AppRoutes() {
           <Route index element={<Navigate to="/teacher/dashboard" replace />} />
           <Route path="dashboard" element={<TeacherDashboard />} />
           <Route path="classes" element={<TeacherClasses />} />
+          <Route path="attendance" element={<TeacherAttendance />} />
+          <Route path="grades" element={<TeacherGrades />} />
+          <Route path="assignments" element={<TeacherAssignments />} />
+          <Route path="materials" element={<TeacherMaterials />} />
           <Route path="schedule" element={<TeacherSchedule />} />
           <Route path="profile" element={<TeacherProfile />} />
       </Route>
