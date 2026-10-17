@@ -1,27 +1,19 @@
 import "./Header.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import {
     notificationData,
-    pageTitles,
     studentUser,
 } from "../../../../data/StudentData/HeaderData";
 
-import type { PageTitle } from "../../../../types";
 function Header() {
-    const location = useLocation();
-
-    const page: PageTitle = pageTitles[location.pathname] || {
-        title: "Student",
-        subtitle: "Welcome back, Duy Nam! 👋",
-    };
 
     return (
         <header className="student-header">
             {/* LEFT - TITLE */}
             <div className="header-title">
-                <h1>{page.title}</h1>
-                <p>{page.subtitle}</p>
+                <h1>Dashboard</h1>
+                <p>Welcome to Class, {studentUser.name}! <i className="fa-solid fa-hand-sparkles"></i></p>
             </div>
 
             {/* RIGHT */}
@@ -37,7 +29,10 @@ function Header() {
                         to="/search"
                         className="search-link"
                     >
-                        <span className="search-icon">⌕</span>
+                        {/* Dùng thẻ i của HTML thuần */}
+                        <span className="search-icon">
+                           <i className="fa-brands fa-sistrix" ></i>
+                        </span>
                     </Link>
                 </div>
 
@@ -46,7 +41,8 @@ function Header() {
                     type="button"
                     className="notification-button"
                 >
-                    🔔
+                    {/* Dùng thẻ i của HTML thuần */}
+                    <i className="fa-solid fa-bell"></i>
 
                     {notificationData.unreadCount > 0 && (
                         <span className="notification-badge">
@@ -63,11 +59,13 @@ function Header() {
 
                     <div className="user-info">
                         <strong>{studentUser.name}</strong>
-
                         <span>{studentUser.email}</span>
                     </div>
 
-                    <span className="user-arrow">⌄</span>
+                    {/* Dùng thẻ i của HTML thuần */}
+                    <span className="user-arrow">
+                        <i className="fa-regular fa-circle-up fa-flip-vertical"></i>
+                    </span>
                 </div>
             </div>
         </header>
