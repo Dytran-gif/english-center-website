@@ -12,7 +12,7 @@ function Sidebar() {
             ========================= */}
             <div className="sidebar-logo">
                 <h1>Hadi</h1>
-                <p>Learn English · Grow Everyday</p>
+                <p>Learn English Grow Everyday</p>
             </div>
 
 

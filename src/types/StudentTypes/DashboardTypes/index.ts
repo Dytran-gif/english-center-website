@@ -1,25 +1,17 @@
 export type {
-    StatItem,
-    DashboardStats,
-} from "./stats";
+    CourseCard,
+} from "./courseCard";
 
 export type {
-    AISuggestionActionType,
-    AISuggestion,
-} from "./AISuggested";
+    NextLesson,
+} from "./nextLessonCard";
 
 export type {
-    Performance,
-} from "./performance";
+    RecommendedItem,
+} from "./recommendedItemCard";
 
 export type {
-    LearningSkill,
-    LearningOverview,
-    LearningMessage,
-    LearningProcess,
-} from "./learningProcess";
-
-export type {
-    StudyTimeItem,
-    StudyTime,
-} from "./studyTime";
+    LearningGoal,
+    QuickAction,
+    NotificationItem
+} from "./rightColumnCard";
