@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import StudentLayout from "./pages/student/Layout/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard/Dashboard";
+import StudentSkill from "./pages/student/Skill/Skill";
 import AdminLayout from "./pages/admin/Layout/AdminLayout";
 import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
 import CoursesManagement from "./pages/admin/Courses/CoursesManagement";
@@ -34,78 +35,78 @@ import TeacherAssignments from "./pages/teacher/Assignments/Assignments";
 import TeacherMaterials from "./pages/teacher/Materials/Materials";
 
 export default function AppRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/ve-chung-toi" element={<About />} />
-      <Route path="/khoa-hoc" element={<Courses />} />
-      <Route path="/khoa-hoc/:slug" element={<CourseDetail />} />
-      <Route path="/giao-vien" element={<Teachers />} />
-      <Route path="/giao-vien/:slug" element={<TeacherDetail />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<BlogDetail />} />
-      <Route path="/lien-he" element={<Contact />} />
-      <Route path="/dang-nhap" element={<Login />} />
-      <Route path="/dang-ky" element={<Register />} />
-      <Route path="/tai-khoan" element={<Profile />} />
-<Route
-    path="/student"
-    element={
-        <ProtectedRoute role="student">
-            <StudentLayout />
-        </ProtectedRoute>
-    }
->
-    <Route index element={<Navigate to="/student/dashboard" replace />} />
-    <Route path="dashboard" element={<StudentDashboard />} />
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ve-chung-toi" element={<About />} />
+            <Route path="/khoa-hoc" element={<Courses />} />
+            <Route path="/khoa-hoc/:slug" element={<CourseDetail />} />
+            <Route path="/giao-vien" element={<Teachers />} />
+            <Route path="/giao-vien/:slug" element={<TeacherDetail />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/lien-he" element={<Contact />} />
+            <Route path="/dang-nhap" element={<Login />} />
+            <Route path="/dang-ky" element={<Register />} />
+            <Route path="/tai-khoan" element={<Profile />} />
+            <Route
+                path="/student"
+                element={
+                    <ProtectedRoute role="student">
+                        <StudentLayout />
+                    </ProtectedRoute>
+                }
+            >
+                <Route index element={<Navigate to="/student/dashboard" replace />} />
+                <Route path="dashboard" element={<StudentDashboard />} />
 
-    {/* Sau này thêm các page */}
-    {/* 
-    <Route path="skill" element={<StudentSkill />} />
-    <Route path="practice" element={<StudentPractice />} />
+                {/* Sau này thêm các page */}
+
+                <Route path="skill" element={<StudentSkill />} />
+                {/* <Route path="practice" element={<StudentPractice />} />
     <Route path="process" element={<StudentProcess />} />
     <Route path="schedule" element={<StudentSchedule />} />
     <Route path="courses" element={<StudentCourses />} />
     <Route path="feedback" element={<StudentFeedback />} />
-    <Route path="tuition" element={<StudentTuition />} />
-    */}
-</Route>
-      <Route
-          path="/admin"
-          element={
-              <ProtectedRoute role="admin">
-                  <AdminLayout />
-              </ProtectedRoute>
-          }
-      >
-          <Route index element={<Navigate to="/admin/dashboard" replace />} />
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="courses" element={<CoursesManagement />} />
-          <Route path="users" element={<UsersManagement />} />
-          <Route path="blog" element={<BlogManagement />} />
-          <Route path="payments" element={<PaymentsManagement />} />
-          <Route path="reports" element={<Reports />} />
-          <Route path="rooms" element={<RoomsManagement />} />
-      </Route>
-      <Route
-          path="/teacher"
-          element={
-              <ProtectedRoute role="teacher">
-                  <TeacherLayout />
-              </ProtectedRoute>
-          }
-      >
-          <Route index element={<Navigate to="/teacher/dashboard" replace />} />
-          <Route path="dashboard" element={<TeacherDashboard />} />
-          <Route path="classes" element={<TeacherClasses />} />
-          <Route path="attendance" element={<TeacherAttendance />} />
-          <Route path="grades" element={<TeacherGrades />} />
-          <Route path="assignments" element={<TeacherAssignments />} />
-          <Route path="materials" element={<TeacherMaterials />} />
-          <Route path="schedule" element={<TeacherSchedule />} />
-          <Route path="profile" element={<TeacherProfile />} />
-      </Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
+    <Route path="tuition" element={<StudentTuition />} /> */}
+
+            </Route>
+            <Route
+                path="/admin"
+                element={
+                    <ProtectedRoute role="admin">
+                        <AdminLayout />
+                    </ProtectedRoute>
+                }
+            >
+                <Route index element={<Navigate to="/admin/dashboard" replace />} />
+                <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="courses" element={<CoursesManagement />} />
+                <Route path="users" element={<UsersManagement />} />
+                <Route path="blog" element={<BlogManagement />} />
+                <Route path="payments" element={<PaymentsManagement />} />
+                <Route path="reports" element={<Reports />} />
+                <Route path="rooms" element={<RoomsManagement />} />
+            </Route>
+            <Route
+                path="/teacher"
+                element={
+                    <ProtectedRoute role="teacher">
+                        <TeacherLayout />
+                    </ProtectedRoute>
+                }
+            >
+                <Route index element={<Navigate to="/teacher/dashboard" replace />} />
+                <Route path="dashboard" element={<TeacherDashboard />} />
+                <Route path="classes" element={<TeacherClasses />} />
+                <Route path="attendance" element={<TeacherAttendance />} />
+                <Route path="grades" element={<TeacherGrades />} />
+                <Route path="assignments" element={<TeacherAssignments />} />
+                <Route path="materials" element={<TeacherMaterials />} />
+                <Route path="schedule" element={<TeacherSchedule />} />
+                <Route path="profile" element={<TeacherProfile />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    );
 }

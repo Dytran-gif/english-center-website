@@ -1,5 +1,5 @@
 //import { useAuth } from "../../../context/AuthContext";
-import "./Dashboard.css"
+import "../General.css"
 // Components
 import NextLessonFE from "./Components/NextLesson"; //giải thích: nextLessonFE là tên function nằm trong file NextLesson.tsx
 import CourseFE from "./Components/Course";
@@ -13,7 +13,6 @@ import NotificationItemFE from "./Components/NotificationItem";
 export default function StudentDashboard() {
     //const { logout } = useAuth();
     return (
-
         <div className="container">
             <div className="row g-3">
                 <div className="col-9">

@@ -1,0 +1,162 @@
+/* RecommendedSkill.css */
+.sd-card{
+    margin-top: 20px;
+}
+.skill-recommended-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.sr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.sr-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sr-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.sr-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.sr-refresh-btn {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.sr-refresh-btn:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* DANH SÁCH (VERTICAL LIST) */
+.sr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Khoảng cách giữa các mục */
+    max-height: 500px; /* Bạn có thể tăng/giảm số này để hiển thị số lượng thẻ mong muốn trước khi phải cuộn */
+    overflow-y: auto;
+    padding-right: 8px;
+}
+.sr-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sr-list::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.sr-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 8px;
+}
+.sr-item {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9; /* Đường kẻ mỏng ngăn cách */
+}
+
+/* Bỏ đường kẻ ở item cuối cùng */
+.sr-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ẢNH BÊN TRÁI */
+.sr-item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* NỘI DUNG Ở GIỮA */
+.sr-item-content {
+    flex: 1; /* Tự động chiếm hết phần không gian trống giữa ảnh và nút Start */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* MÀU SẮC RIÊNG CHO TỪNG TAG */
+.sr-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    margin-bottom: 6px;
+}
+
+.tag-listening { background-color: #eff6ff; color: #2563eb; }
+.tag-speaking { background-color: #faf5ff; color: #9333ea; }
+.tag-reading { background-color: #ecfdf5; color: #059669; }
+.tag-writing { background-color: #fff7ed; color: #ea580c; }
+.tag-default { background-color: #f3f4f6; color: #4b5563; }
+
+.sr-item-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.sr-item-info {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* NÚT START BÊN PHẢI */
+.sr-start-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sr-start-btn i {
+    font-size: 10px; /* Làm icon mũi tên nhỏ lại cho cân đối */
+}
+
+.sr-start-btn:hover {
+    background-color: #1d4ed8;
+}

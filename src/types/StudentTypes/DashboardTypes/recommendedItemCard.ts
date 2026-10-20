@@ -5,4 +5,5 @@ export interface RecommendedItem {
   title: string;
   levelInfo: string; // VD: "Level B1 • 12 lessons"
   imageUrl?: string;
+  lessonTime: string; // VD: "15 min"
 }

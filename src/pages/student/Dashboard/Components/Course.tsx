@@ -70,7 +70,7 @@ export default function CourseFE() {
                                 {course.unit}: {course.title}
                             </h3>
                             <p className="course-info">
-                                - {course.type} {course.lesson}
+                                {course.type} {course.lesson}
                             </p>
 
                             <div className="course-footer">

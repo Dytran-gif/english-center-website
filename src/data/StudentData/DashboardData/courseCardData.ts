@@ -9,7 +9,8 @@ export const continueLearningData: CourseCard[] = [
     type: "Listening",
     lesson: "Lesson 2",
     progress: 60,
-    imageUrl: imageMock // Ảnh cô gái đeo tai nghe
+    imageUrl: imageMock,
+    courseTime: "30 phút"
   },
   {
     id: "course-2",
@@ -18,7 +19,8 @@ export const continueLearningData: CourseCard[] = [
     type: "Speaking",
     lesson: "Lesson 1",
     progress: 30,
-    imageUrl: imageMock // Ảnh cuốn sổ và cây bút
+    imageUrl: imageMock,
+    courseTime: "30 phút" 
   },
   {
     id: "course-2",
@@ -27,7 +29,8 @@ export const continueLearningData: CourseCard[] = [
     type: "Speaking",
     lesson: "Lesson 1",
     progress: 30,
-    imageUrl: imageMock // Ảnh cuốn sổ và cây bút
+    imageUrl: imageMock,
+    courseTime: "30 phút"
   }, 
   {
     id: "course-2",
@@ -36,7 +39,8 @@ export const continueLearningData: CourseCard[] = [
     type: "Speaking",
     lesson: "Lesson 1",
     progress: 30,
-    imageUrl: imageMock // Ảnh cuốn sổ và cây bút
+    imageUrl: imageMock,
+    courseTime: "30 phút"
   },
   {
     id: "course-2",
@@ -45,8 +49,8 @@ export const continueLearningData: CourseCard[] = [
     type: "Speaking",
     lesson: "Lesson 1",
     progress: 30,
-    imageUrl: imageMock // Ảnh cuốn sổ và cây bút
+    imageUrl: imageMock,
+    courseTime: "30 phút"
   },
   
-
 ];

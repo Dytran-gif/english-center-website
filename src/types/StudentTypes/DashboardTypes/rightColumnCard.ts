@@ -3,6 +3,7 @@ export interface LearningGoal {
   title: string; // VD: "Reach B1 level"
   progress: number; // VD: 68
   targetDate: string; // VD: "30 Jun 2025"
+  goalTime?: string; // VD: "6 months" (tùy chọn, có thể không có)
 }
 
 // Dành cho danh sách "Quick Actions"

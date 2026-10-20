@@ -7,4 +7,5 @@ export interface CourseCard {
   lesson: string;
   progress: number;
   imageUrl?: string;
+  courseTime: string; // VD: "15 min"
 }
