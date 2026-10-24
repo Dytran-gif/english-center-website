@@ -16,6 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import StudentLayout from "./pages/student/Layout/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard/Dashboard";
 import StudentSkill from "./pages/student/Skill/Skill";
+import StudentCourse from "./pages/student/Course/Course";
 import AdminLayout from "./pages/admin/Layout/AdminLayout";
 import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
 import CoursesManagement from "./pages/admin/Courses/CoursesManagement";
@@ -63,10 +64,10 @@ export default function AppRoutes() {
                 {/* Sau này thêm các page */}
 
                 <Route path="skill" element={<StudentSkill />} />
-                {/* <Route path="practice" element={<StudentPractice />} />
-    <Route path="process" element={<StudentProcess />} />
+                <Route path="courses" element={<StudentCourse />} />
+                {/* 
     <Route path="schedule" element={<StudentSchedule />} />
-    <Route path="courses" element={<StudentCourses />} />
+    
     <Route path="feedback" element={<StudentFeedback />} />
     <Route path="tuition" element={<StudentTuition />} /> */}
 

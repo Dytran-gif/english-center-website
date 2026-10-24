@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 import {
     notificationData,
@@ -7,12 +7,20 @@ import {
 } from "../../../../data/StudentData/HeaderData";
 
 function Header() {
+    const location = useLocation();
 
+    const pageTitles: Record<string, string> = {
+        "/student/dashboard": "Dashboard Overview",
+        "/student/skill": "Skill Details",
+        "/student/practice": "Practice Exercises",
+    };
+
+    const title = pageTitles[location.pathname] ?? "Dashboard";
     return (
         <header className="student-header">
             {/* LEFT - TITLE */}
             <div className="header-title">
-                <h1>Dashboard</h1>
+                <h1>{title}</h1>
                 <p>Welcome to Class, {studentUser.name}! <i className="fa-solid fa-hand-sparkles"></i></p>
             </div>
 
