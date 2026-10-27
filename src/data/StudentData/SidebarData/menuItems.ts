@@ -7,11 +7,6 @@ export const sidebarMenuItems: SidebarMenuItem[] = [
         icon: "⌂",
     },
     {
-        label: "Skills",
-        path: "/student/skill",
-        icon: "◆",
-    },
-    {
         label: "Schedule",
         path: "/student/schedule",
         icon: "▣",

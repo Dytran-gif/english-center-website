@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import type { Course, CourseLevel } from '../../../../types/StudentTypes/CoursesTypes';
-import { coursesData } from '../../../../data/StudentData/CourseData';
+import type { Course, CourseLevel, SkillRange } from '../../../../types/StudentTypes/MainTypes';
+import { coursesData } from '../../../../data/StudentData/MainData';
 import './CourseMain.css';
 
 // Component nhận vào hàm onSelectCourse để sau này truyền dữ liệu xuống Khu vực 2 (Bottom)
@@ -25,7 +25,7 @@ export default function CourseMainFE({ onSelectCourse }: CourseMainProps) {
             const matchLevel = selectedLevel === 'All Levels' || course.level === selectedLevel;
 
             // 3. Lọc theo Skill
-            const matchSkill = selectedSkill === 'All Skills' || course.skills.includes(selectedSkill);
+            const matchSkill = selectedSkill === 'All Skills' || course.skills.includes(selectedSkill as SkillRange);
 
             // 4. Lọc theo Type (Giả lập dựa vào tên khóa học)
             let matchType = true;

@@ -15,7 +15,6 @@ import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import StudentLayout from "./pages/student/Layout/StudentLayout";
 import StudentDashboard from "./pages/student/Dashboard/Dashboard";
-import StudentSkill from "./pages/student/Skill/Skill";
 import StudentCourse from "./pages/student/Course/Course";
 import AdminLayout from "./pages/admin/Layout/AdminLayout";
 import AdminDashboard from "./pages/admin/Dashboard/Dashboard";
@@ -63,7 +62,7 @@ export default function AppRoutes() {
 
                 {/* Sau này thêm các page */}
 
-                <Route path="skill" element={<StudentSkill />} />
+                
                 <Route path="courses" element={<StudentCourse />} />
                 {/* 
     <Route path="schedule" element={<StudentSchedule />} />

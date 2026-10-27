@@ -1,14 +1,10 @@
 //import { useAuth } from "../../../context/AuthContext";
 import "../General.css"
 // Components
-import NextLessonFE from "./Components/NextLesson"; //giải thích: nextLessonFE là tên function nằm trong file NextLesson.tsx
+import PresentLessonFE from "./Components/PresentLesson"; 
 import CourseFE from "./Components/Course";
-import RecommendedItemFE from "./Components/RecommendedItem";
-import LearningGoalFE from "./Components/LearningGoal";
 import QuickActionFE from "./Components/QuickAction";
 import NotificationItemFE from "./Components/NotificationItem";
-
-
 
 export default function StudentDashboard() {
     //const { logout } = useAuth();
@@ -19,7 +15,7 @@ export default function StudentDashboard() {
                     <div className="row g-3">
                         <div className="col-12">
                             <div className="card">
-                                <NextLessonFE />
+                                <PresentLessonFE />
                             </div>
                         </div>
 
@@ -28,22 +24,12 @@ export default function StudentDashboard() {
                                 <CourseFE />
                             </div>
                         </div>
-
-                        <div className="col-12">
-                            <div className="card">
-                                <RecommendedItemFE />
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div className="col-3">
                     <div className="row g-3">
-                        <div className="col-12">
-                            <div className="card">
-                                <LearningGoalFE />
-                            </div>
-                        </div>
+
                         <div className="col-12">
                             <div className="card">
                                 <QuickActionFE />

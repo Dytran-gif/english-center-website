@@ -1,5 +1,5 @@
 
-import { recentNotificationsData } from "../../../../data/StudentData/DashboardData"; // Đảm bảo đường dẫn data
+import { recentNotificationsData } from "../../../../data/StudentData/MainData"; // Đảm bảo đường dẫn data
 import "./NotificationItem.css";
 
 // Hàm hỗ trợ render icon và màu sắc tương ứng

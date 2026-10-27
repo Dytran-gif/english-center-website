@@ -1,9 +1,15 @@
-import { nextLessonData } from "../../../../data/StudentData/DashboardData";
+import { coursesData } from "../../../../data/StudentData/MainData";
 import bannerImage from "../../../../assets/images/Banner-dashboard.png";
 import bannerArrowImage from "../../../../assets/images/Banner-arrow-dashboard.png";
-import "./NextLesson.css"
+import "./PresentLesson.css"
 
-export default function NextLessonFE() {
+export default function PresentLessonFE() {
+    // Lấy khóa học đầu tiên làm bài học hiển thị (Demo)
+    const currentCourse = coursesData[0];
+
+    // Kiểm tra an toàn, nếu không có dữ liệu thì không render thẻ để tránh lỗi
+    if (!currentCourse) return null;
+
     return (
         <section className="next-lesson-section">
             {/* Lớp nền gradient mờ */}
@@ -34,28 +40,17 @@ export default function NextLessonFE() {
             {/* Cột giữa: Thẻ bài học */}
             <div className="middle-column card">
                 <img
-                    src={nextLessonData.imageUrl || "/api/placeholder/400/200"}
-                    alt={nextLessonData.title}
+                    src={currentCourse.imageUrl || "/api/placeholder/400/200"}
+                    alt={currentCourse.title}
                     className="card-image"
                 />
                 <h3 className="card-title">
-                    {nextLessonData.unit}: {nextLessonData.title}
+                    {currentCourse.level}: {currentCourse.title}
                 </h3>
                 <p className="card-subtitle">
-                    {nextLessonData.lessonName} • {nextLessonData.type}
+                    {currentCourse.skills ? currentCourse.skills.join(" • ") : "General English"}
                 </p>
 
-                <div className="progress-wrapper">
-                    <div className="progress-track">
-                        <div
-                            className="progress-fill"
-                            style={{ width: `${nextLessonData.progress}%` }}
-                        ></div>
-                    </div>
-                    <span className="progress-text">
-                        {nextLessonData.progress}%
-                    </span>
-                </div>
             </div>
 
             {/* Cột phải: Hình ảnh minh họa */}
@@ -66,10 +61,11 @@ export default function NextLessonFE() {
                 <img
                     src={bannerArrowImage}
                     className="arrow-image"
+                    alt="Arrow styling"
                 />
                 <img
                     src={bannerImage}
-                    alt={nextLessonData.title}
+                    alt={currentCourse.title}
                     className="illustration-image"
                 />
             </div>

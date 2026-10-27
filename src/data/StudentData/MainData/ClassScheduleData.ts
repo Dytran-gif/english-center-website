@@ -1,4 +1,4 @@
-import type { ClassSchedule } from "../../../types/StudentTypes/CoursesTypes";
+import type { ClassSchedule } from "../../../types/StudentTypes/MainTypes";
 
 // Gom nhóm lịch học theo ID của khóa học (c1, c2, c3,...)
 export const schedulesByCourseId: Record<string, ClassSchedule[]> = {

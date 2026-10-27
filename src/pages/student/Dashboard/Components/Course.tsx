@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { continueLearningData } from "../../../../data/StudentData/DashboardData";
+import { coursesData } from "../../../../data/StudentData/MainData";
 import "./Course.css"
 
 export default function CourseFE() {
@@ -39,7 +39,7 @@ export default function CourseFE() {
                         <i className="fa-solid fa-book"></i>
                     </div>
                     <div className="header-text">
-                        <h2 className="section-title">Continue Learning</h2>
+                        <h2 className="section-title">Present Lessons</h2>
                         <p className="section-subtitle">Pick up where you left off</p>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ export default function CourseFE() {
                 onMouseUp={handleMouseUpOrLeave}
                 onMouseMove={handleMouseMove}
             >
-                {continueLearningData.slice(0, 10).map((course) => (
+                {coursesData.slice(0, 10).map((course) => (
                     <div
                         key={course.id}
                         className="course-card scroll-item"
@@ -67,25 +67,24 @@ export default function CourseFE() {
                     >
                         <div className="course-content">
                             <h3 className="course-title">
-                                {course.unit}: {course.title}
+                                {course.title}
                             </h3>
-                            <p className="course-info">
-                                {course.type} {course.lesson}
-                            </p>
-
-                            <div className="course-footer">
-                                <div className="progress-container">
-                                    <div className="progress-track">
-                                        <div
-                                            className="progress-fill"
-                                            style={{ width: `${course.progress}%` }}
-                                        ></div>
-                                    </div>
-                                    <span className="progress-text">{course.progress}%</span>
+                            <div className="course-info">
+                                {/* Dòng 1: Level và Time */}
+                                <div className="course-meta">
+                                    <span className="info-level">{course.level}</span>
+                                    <span className="meta-divider">•</span>
+                                    <span className="info-time">{course.timePerLesson} hrs/lesson</span>
                                 </div>
-                                <button className="continue-course-btn" aria-label="Continue">
-                                    <i className="fa-regular fa-square-caret-right"></i>
-                                </button>
+
+                                {/* Dòng 2: Danh sách các Tag kỹ năng */}
+                                <div className="info-skills">
+                                    {course.skills.map((skill, index) => (
+                                        <span key={index} className="skill-tag">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

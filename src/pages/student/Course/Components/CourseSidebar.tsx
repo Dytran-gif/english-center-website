@@ -1,9 +1,7 @@
 import React from 'react';
-import { courseFeaturesData } from '../../../../data/StudentData/CourseData';
+import { courseFeaturesData } from '../../../../data/StudentData/OtherData';
 import './CourseSidebar.css';
 import BookBanner from "../../../../assets/images/BookBanner.png";
-import StairBanner from "../../../../assets/images/StairBanner.png";
-
 
 export default function CourseSidebarFE() {
     return (

@@ -28,7 +28,7 @@
     justify-content: center;
     width: 48px;
     height: 48px;
-    background-color: #eff6ff; 
+    background-color: #eff6ff;
     border-radius: 12px;
     color: #2563eb;
     font-size: 30px;
@@ -95,7 +95,7 @@
 /* COURSE CARD STYLES - ĐÃ ĐƯỢC LÀM NHỎ LẠI */
 .course-card {
     background-color: #ffffff;
-    border: 1px solid #e5e7eb; 
+    border: 1px solid #e5e7eb;
     border-radius: 16px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
@@ -109,9 +109,9 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    z-index: 0; 
+    z-index: 0;
     padding: 60px 0px 0px 0px;
-    
+
 }
 
 .course-card:hover {
@@ -124,134 +124,107 @@
     padding: 12px 16px;
     display: flex;
     flex-direction: column;
-    flex: 1; 
-    background-color: rgb(255, 255, 255); 
-    border-radius: 15px 15px 0 0; 
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 15px 0 0;
 }
 
 .course-title {
-    font-size: 15px; 
+    font-size: 12px;
     font-weight: 700;
-    color: #1f2937;
-    margin: 0 0 4px 0; 
+    color: #4e8be0;
+    margin: 0 0 4px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .course-info {
-    font-size: 12px; /* Giảm font-size */
-    color: #6b7280;
-    margin: 0 0 16px 0;
+    margin: 8px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Khoảng cách giữa dòng chữ và dòng tag */
 }
 
-.course-footer {
+/* Khối chứa Level và Time */
+.course-meta {
+    font-size: 10px;
+    color: #6d6f71;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: auto; /* Tự động đẩy footer xuống đáy */
+    gap: 6px;
 }
 
-.progress-container {
+.info-level {
+    font-weight: 700;
+    color: #0f1011;
+    font-size: 10px;
+}
+
+.meta-divider {
+    color: #9ca3af;
+    font-size: 10px;
+}
+
+/* Container bọc các thẻ Tag */
+.info-skills {
     display: flex;
-    align-items: center;
-    gap: 8px; /* Thu hẹp khoảng cách */
-    flex: 1;
+    flex-wrap: wrap;
+    gap: 4px;
+    /* Khoảng cách giữa các tag */
 }
 
-.progress-track {
-    flex: 1;
-    background-color: #dbeafe;
-    height: 4px; /* Làm thanh tiến độ mỏng hơn */
-    border-radius: 9999px;
-}
-
-.progress-fill {
-    background-color: #2563eb;
-    height: 100%;
-    border-radius: 9999px;
-    transition: width 0.3s ease;
-}
-
-.progress-text {
-    font-size: 12px; /* Chữ phần trăm nhỏ lại */
+/* Kiểu dáng từng Tag (Giống hệt trang Course) */
+.skill-tag {
+    background-color: #eff6ff;
+    /* Nền xanh nhạt */
+    color: #2563eb;
+    /* Chữ xanh đậm */
+    font-size: 8px;
     font-weight: 600;
-    color: #4b5563;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    /* Bo tròn hoàn toàn 2 đầu */
 }
-
-.continue-course-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px; /* Thu nhỏ nút tròn từ 32px xuống 28px */
-    height: 28px;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    padding: 0;
-    font-size: 15px; 
-}
-
-.continue-course-btn:hover {
-    background-color: #1d4ed8;
-    
-}
-.continue-course-btn i {
-    display: inline-block;
-}
-
-.continue-course-btn:hover i {
-    animation: arrowGuide 0.8s ease-in-out infinite alternate;
-}
-
-@keyframes arrowGuide {
-    from {
-        transform: translateX(-3px);
-    }
-    to {
-        transform: translateX(3px);
-    }
-}
-/* --- THÊM VÀO CUỐI FILE CSS CỦA BẠN ĐỂ HỖ TRỢ TRƯỢT NGANG --- */
 
 .horizontal-scroll-wrapper {
-    display: flex !important; /* Ghi đè thuộc tính grid cũ nếu có */
+    display: flex !important;
     flex-wrap: nowrap;
     gap: 24px;
-    overflow-x: auto; /* Tự động hiện thanh trượt khi nội dung tràn */
-    padding-bottom: 16px; /* Chừa không gian dưới đáy cho thanh trượt */
+    overflow-x: auto;
+    padding-bottom: 16px;
     scroll-behavior: smooth;
-    
-    /* BỎ thuộc tính ẩn scrollbar-width: none; đi */
 }
 
 /* --- LÀM ĐẸP THANH TRƯỢT (Dành cho Chrome, Safari, Edge) --- */
 .horizontal-scroll-wrapper::-webkit-scrollbar {
-    height: 6px; /* Độ dày của thanh trượt ngang */
-    display: block; /* Hiện thanh trượt */
+    height: 6px;
+    /* Độ dày của thanh trượt ngang */
+    display: block;
+    /* Hiện thanh trượt */
 }
 
 .horizontal-scroll-wrapper::-webkit-scrollbar-track {
-    background: #f1f5f9; /* Màu nền rãnh trượt (xám nhạt) */
+    background: #f1f5f9;
+    /* Màu nền rãnh trượt (xám nhạt) */
     border-radius: 8px;
 }
 
 .horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
-    background: #cbd5e1; /* Màu của cục trượt */
+    background: #cbd5e1;
+    /* Màu của cục trượt */
     border-radius: 8px;
 }
 
 .horizontal-scroll-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8; /* Màu cục trượt khi hover chuột vào */
+    background: #94a3b8;
+    /* Màu cục trượt khi hover chuột vào */
 }
 
 /* --- Kích thước card --- */
 .scroll-item {
-    flex: 0 0 260px !important; 
+    flex: 0 0 260px !important;
     min-width: 260px;
 }
 
@@ -261,20 +234,24 @@
         min-width: 220px;
     }
 }
+
 /* --- TRẠNG THÁI KÉO THẢ CHUỘT --- */
 
 .horizontal-scroll-wrapper {
-    cursor: grab; /* Hình bàn tay khi chỉ vào */
+    cursor: grab;
+    /* Hình bàn tay khi chỉ vào */
 }
 
 /* Khi đang nhấn giữ chuột (kéo) */
 .horizontal-scroll-wrapper.active-drag {
-    cursor: grabbing; /* Hình bàn tay nắm lại */
-    scroll-behavior: auto; /* Tắt cuộn mượt khi kéo tay để tránh bị delay giật lag */
+    cursor: grabbing;
+    /* Hình bàn tay nắm lại */
+    scroll-behavior: auto;
+    /* Tắt cuộn mượt khi kéo tay để tránh bị delay giật lag */
 }
 
 /* Tắt khả năng vô tình bôi đen text hoặc kéo hình ảnh ra ngoài khi đang vuốt */
 .horizontal-scroll-wrapper.active-drag .course-card {
-    pointer-events: none; 
-    user-select: none; 
+    pointer-events: none;
+    user-select: none;
 }

@@ -1,4 +1,4 @@
-import type { NotificationItem } from "../../../types/StudentTypes/DashboardTypes";
+import type { NotificationItem } from "../../../types/StudentTypes/MainTypes";
 
 export const recentNotificationsData: NotificationItem[] = [
   {

@@ -1,5 +1,5 @@
-import type { Course } from "../../../types/StudentTypes/CoursesTypes";
-import { schedulesByCourseId } from "./courseBottomData";
+import type { Course } from "../../../types/StudentTypes/MainTypes";
+import { schedulesByCourseId } from "./ClassScheduleData";
 import imageMock from "../../../assets/images/next-lesson-mock.jpg";
 
 export const coursesData: Course[] = [
@@ -9,10 +9,12 @@ export const coursesData: Course[] = [
         description: "Build a solid foundation in English with practical and everyday communication skills.",
         level: "Beginner",
         imageUrl: imageMock,
-        durationHours: 60,
+        durationHours: 40,
         studentCapacity: "12-15 students",
-        skills: ["Speaking", "Listening", "Grammar"],
         price: 2500000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
+        skills: ["Speaking", "Listening", "Grammar"],
         availableClasses: schedulesByCourseId["c1"] || []
     },
     {
@@ -21,10 +23,12 @@ export const coursesData: Course[] = [
         description: "Improve your speaking confidence in real-life situations and daily conversations.",
         level: "Intermediate",
         imageUrl: imageMock,
-        durationHours: 45,
+        durationHours: 40,
         studentCapacity: "10-12 students",
         skills: ["Speaking", "Pronunciation", "Vocabulary"],
         price: 2200000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
         availableClasses: schedulesByCourseId["c2"] || []
     },
     {
@@ -33,10 +37,12 @@ export const coursesData: Course[] = [
         description: "Develop your professional communication skills for the workplace and business environment.",
         level: "Advanced",
         imageUrl: imageMock,
-        durationHours: 60,
+        durationHours: 40,
         studentCapacity: "12-15 students",
         skills: ["Speaking", "Writing", "Listening"],
         price: 2800000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
         availableClasses: schedulesByCourseId["c3"] || []
     },
     {
@@ -45,10 +51,12 @@ export const coursesData: Course[] = [
         description: "Train your listening skills with authentic materials and real-life topics.",
         level: "Intermediate",
         imageUrl: imageMock,
-        durationHours: 45,
+        durationHours: 40,
         studentCapacity: "10-15 students",
-        skills: ["Listening", "Vocabulary", "Pronunciation"],
+        skills: ["Listening", "Vocabulary" ],
         price: 2000000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
         availableClasses: schedulesByCourseId["c4"] || []
     },
     {
@@ -61,6 +69,8 @@ export const coursesData: Course[] = [
         studentCapacity: "10-12 students",
         skills: ["Writing", "Grammar", "Vocabulary"],
         price: 2000000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
         availableClasses: schedulesByCourseId["c5"] || []
     },
     {
@@ -73,6 +83,8 @@ export const coursesData: Course[] = [
         studentCapacity: "12-15 students",
         skills: ["Speaking", "Listening", "Vocabulary"],
         price: 2000000,
+        timePerLesson : 2,
+        numberOfLessons : 20,
         availableClasses: schedulesByCourseId["c6"] || []
     }
 ];

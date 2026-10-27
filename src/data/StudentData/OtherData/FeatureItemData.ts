@@ -1,4 +1,4 @@
-import type { FeatureItem } from "../../../types/StudentTypes/CoursesTypes";
+import type { FeatureItem } from "../../../types/StudentTypes/MainTypes";
 
 export const courseFeaturesData: FeatureItem[] = [
     {

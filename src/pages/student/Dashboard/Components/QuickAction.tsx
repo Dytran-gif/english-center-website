@@ -1,5 +1,5 @@
 
-import { quickActionsData } from "../../../../data/StudentData/DashboardData"; // Đảm bảo đường dẫn data của bạn
+import { quickActionsData } from "../../../../data/StudentData/OtherData"; 
 import "./QuickAction.css";
 
 // Hàm hỗ trợ render icon dựa vào iconType
