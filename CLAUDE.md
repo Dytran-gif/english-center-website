@@ -46,9 +46,11 @@ Lưu ý: /data/*.json ở GỐC repo là dữ liệu cũ, APP KHÔNG dùng — c
 
 ## AI GIỮ PHẦN NÀO (chia theo thư mục để không đụng nhau)
 - Hoàng — TRANG CHỦ + nền auth: src/pages/Home.tsx, src/components/sections/,
-  src/context/, src/components/ProtectedRoute.tsx.
-- ⟨Bạn 2⟩ — DASHBOARD: src/pages/student/  và/hoặc  src/pages/teacher/
-- ⟨Bạn 3⟩ — DASHBOARD: src/pages/admin/   (2 bạn tự chia 3 vai trò cho đều)
+  src/context/, src/components/ProtectedRoute.tsx. (Đã xong)
+- Nam — DASHBOARD: src/pages/student/ (Đã xong)
+- Dytran-gif — DASHBOARD: src/pages/admin/ và src/pages/teacher/ (Đã xong —
+  gồm cả CRUD khóa học/người dùng/blog, quản lý học phí, báo cáo, phòng học,
+  điểm danh, bảng điểm, bài tập, tài liệu giảng dạy)
 
 ## FILE DÙNG CHUNG — sửa phải báo nhóm trước
 src/routes.tsx · src/styles/tokens.css · src/components/ui/ · src/context/ · src/data/ · src/types/
@@ -57,6 +59,7 @@ src/routes.tsx · src/styles/tokens.css · src/components/ui/ · src/context/ ·
 ## Tài liệu (mỗi thứ 1 nơi, đừng chép lặp)
 - Ai làm gì (đầy đủ): docs/4-Schedule-phan-cong-nhom.md
 - Tiến độ + bàn giao (đọc để biết TIẾP TỪ ĐÂU): docs/5-Tong-quan-tien-do.md
+  (mới nhất: khối "Bàn giao — [21-08-2026]" — Admin/Teacher dashboard mở rộng)
 - Thiết kế hệ thống: docs/3-So-do-thiet-ke-he-thong.md
 
 ## Nhịp làm việc (để không mất context giữa các buổi)

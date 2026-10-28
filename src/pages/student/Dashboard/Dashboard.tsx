@@ -1,37 +1,49 @@
 //import { useAuth } from "../../../context/AuthContext";
-import "./Dashboard.css"
+import "../General.css"
 // Components
-import StatCards from "./Components/StatsCard";
-import AISuggested from "./Components/AISuggested";
-import Performance from "./Components/Performance";
-import LearningProcess from "./Components/LearningProcess";
-import StudyTime from "./Components/StudyTime";
+import PresentLessonFE from "./Components/PresentLesson"; 
+import CourseFE from "./Components/Course";
+import QuickActionFE from "./Components/QuickAction";
+import NotificationItemFE from "./Components/NotificationItem";
 
 export default function StudentDashboard() {
-  //const { logout } = useAuth();
-  return (
-    <div className="container">
-        <div className="row">
-            <div className="col-8">
-                <StatCards />
-                <AISuggested />
-            </div>
+    //const { logout } = useAuth();
+    return (
+        <div className="container">
+            <div className="row g-3">
+                <div className="col-9">
+                    <div className="row g-3">
+                        <div className="col-12">
+                            <div className="card">
+                                <PresentLessonFE />
+                            </div>
+                        </div>
 
-            {/* Performance */}
-            <div className="col-4">
-                <Performance />
-            </div>
-            <div className="row">{/* Learning Process */}
-                <div className="col-6">
-                    <LearningProcess />
+                        <div className="col-12">
+                            <div className="CourseCard">
+                                <CourseFE />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            {/* Study Time */}
-                <div className="col-6">
-                    <StudyTime />
+                <div className="col-3">
+                    <div className="row g-3">
+
+                        <div className="col-12">
+                            <div className="card">
+                                <QuickActionFE />
+                            </div>
+                        </div>
+                        <div className="col-12">
+                            <div className="card">
+                                <NotificationItemFE />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  );
+
+    );
 }

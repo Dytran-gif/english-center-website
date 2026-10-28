@@ -17,4 +17,16 @@ export const adminPageTitles: Record<string, PageTitle> = {
         title: "Quản lý tin tức",
         subtitle: "Xem và quản lý bài viết trên blog.",
     },
+    "/admin/payments": {
+        title: "Quản lý học phí",
+        subtitle: "Theo dõi hóa đơn và trạng thái thanh toán của học viên.",
+    },
+    "/admin/reports": {
+        title: "Báo cáo & thống kê",
+        subtitle: "Tổng quan doanh thu và số liệu vận hành trung tâm.",
+    },
+    "/admin/rooms": {
+        title: "Quản lý phòng học",
+        subtitle: "Danh sách phòng học và phân bổ theo khóa học.",
+    },
 };

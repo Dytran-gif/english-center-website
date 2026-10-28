@@ -7,21 +7,6 @@ export const sidebarMenuItems: SidebarMenuItem[] = [
         icon: "⌂",
     },
     {
-        label: "Skills",
-        path: "/student/skill",
-        icon: "◆",
-    },
-    {
-        label: "Practice",
-        path: "/student/practice",
-        icon: "✎",
-    },
-    {
-        label: "Process",
-        path: "/student/process",
-        icon: "▥",
-    },
-    {
         label: "Schedule",
         path: "/student/schedule",
         icon: "▣",

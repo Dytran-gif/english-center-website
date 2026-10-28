@@ -17,12 +17,10 @@
     --scrollbar: #cbd5e1;
     --scrollbar-hover: #94a3b8;
 
-    width: 270px;
+    width: 180px;
     height: 100vh;
 
     position: fixed;
-    top: 0;
-    left: 0;
 
     background-color: var(--background);
 
@@ -34,8 +32,6 @@
     box-sizing: border-box;
 
     z-index: 1000;
-
-    overflow: hidden;
 }
 
 
@@ -44,36 +40,23 @@
 ========================================================= */
 
 .sidebar-logo {
-    flex-shrink: 0;
-
-    padding: 28px 38px 0;
-
     margin-bottom: 28px;
 }
 
 
 .sidebar-logo h1 {
     margin: 0;
-
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
-
-    line-height: 1.1;
-
     color: var(--primary);
 }
 
 
 .sidebar-logo p {
     margin: 8px 0 0;
-
-    font-size: 13px;
-
+    font-size: 1px;
     line-height: 1.4;
-
     color: var(--text-muted);
-
-    white-space: nowrap;
 }
 
 
@@ -89,16 +72,8 @@
 
 .sidebar-scroll {
     flex: 1;
-
     min-height: 0;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    padding: 0 20px 24px;
-
     box-sizing: border-box;
-
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar) transparent;
 }
@@ -158,7 +133,7 @@
 
     align-items: center;
 
-    gap: 16px;
+    gap: 12px;
 
     padding: 0 18px;
 

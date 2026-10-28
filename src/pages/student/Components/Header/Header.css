@@ -14,8 +14,11 @@
     --surface: #ffffff;
     --surface-hover: #f8fafc;
 
+    /* color use for icons */
+    --first-icon-color: #cbd41d;
+
     width: 100%;
-    height: 100px;
+    height: 70px;
     padding: 0 36px;
 
     display: flex;
@@ -69,7 +72,9 @@
     text-overflow: ellipsis;
 }
 
-
+.fa-hand-sparkles{
+    color: var(--first-icon-color);
+}
 /* =====================================================
    RIGHT SIDE
 ===================================================== */
@@ -89,8 +94,9 @@
 ===================================================== */
 
 .header-search {
-    width: 220px;
-    height: 44px;
+    position: relative;
+    width: 150px;
+    height: 30px;
 
     display: flex;
     align-items: center;
@@ -126,7 +132,7 @@
 
     height: 100%;
     padding: 0;
-
+    padding-right: 22px;
     border: none;
     outline: none;
 
@@ -146,20 +152,17 @@
 /* Search button / link */
 
 .search-link {
-    width: 32px;
-    height: 32px;
+    width: 25px;
+    height: 25px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    flex-shrink: 0;
-
     text-decoration: none;
-
-    border-radius: 8px;
+    border-radius: 50%;
 
     transition: background-color 0.2s ease;
+    position: absolute;
+    right: 3px;
 }
 
 .search-link:hover {
@@ -167,15 +170,8 @@
 }
 
 .search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     color: var(--text-muted);
-
-    font-size: 23px;
-    line-height: 1;
-
+    font-size: 15px;
     transition: color 0.2s ease;
 }
 
@@ -191,8 +187,8 @@
 .notification-button {
     position: relative;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
     align-items: center;
@@ -207,7 +203,7 @@
 
     background: transparent;
 
-    color: var(--text-main);
+    color: var(--accent);
 
     font-size: 20px;
 
@@ -268,9 +264,6 @@
 .header-user {
     display: flex;
     align-items: center;
-
-    gap: 10px;
-
     min-width: 0;
 
     padding: 5px 8px 5px 5px;
@@ -292,8 +285,8 @@
 ===================================================== */
 
 .user-avatar {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
 
     display: flex;
     align-items: center;
@@ -354,7 +347,7 @@
 .user-arrow {
     margin-left: 4px;
 
-    color: var(--text-main);
+    color: var(--text-muted);
 
     font-size: 18px;
     line-height: 1;

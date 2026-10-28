@@ -1,14 +1,14 @@
 .student-layout {
     min-height: 100vh;
 
-    background-color: #eff6ff;
+    background-color: #f5fdff;
 }
 
 
 .student-main {
     min-height: 100vh;
 
-    margin-left: 270px;
+    margin-left: 180px;
 
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
 .student-content {
     flex: 1;
 
-    padding: 32px;
+    padding-top:15px;
 
     box-sizing: border-box;
 }
